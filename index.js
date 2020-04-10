@@ -1,4 +1,4 @@
-	function map(original, callBack){
+function map(original, callBack){
     let newArray = []
     for(let i=0; i<original.length; i++){
         newArray.push(callBack(original[i]))
