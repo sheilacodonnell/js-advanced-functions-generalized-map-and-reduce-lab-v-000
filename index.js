@@ -6,10 +6,10 @@ function map(original, callBack){
     return arr;
  }
 
- function reduce(original, callBack, startingPoint){ 
-    let newValue = (!!startingPoint)? startingPoint : original[0]
-    let i = (!!startingPoint)? 0 : 1
-    for(; i<original.length; i++){
+ function reduce(original, callBack, start){ 
+    let newValue = (!!start) ? start : original[0]
+    let i = (!!start)? 0 : 1
+    for(; i < original.length; i++){
         newValue = callBack(original[i], newValue)
     }
     return newValue;
