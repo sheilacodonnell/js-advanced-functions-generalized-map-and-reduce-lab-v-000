@@ -13,4 +13,4 @@ function map(original, callBack){
         newValue = callBack(original[i], newValue)
     }
     return newValue;
-}
+} 
