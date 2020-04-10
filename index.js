@@ -1,17 +1,16 @@
-function sayHello(name="") {
-  console.log(`Hello${name}`)
-}
- 
-let sayHola = function(name="") {
-  console.log(`Hola${name}`)
-}
- 
-functionUsingCallback(sayHello, sayHola, function(name="") {
-  console.log(`Ni Hao${name}`)
-}, " Gary")
- 
-function map(en, es, zh, name){
-  en(name)
-  es(name)
-  zh(name)
+	function map(original, callBack){
+    let newArray = []
+    for(let i=0; i<original.length; i++){
+        newArray.push(callBack(original[i]))
+    }
+    return newArray;
+ }
+
+ function reduce(original, callBack, startingPoint){ 
+    let newValue = (!!startingPoint)? startingPoint : original[0]
+    let i = (!!startingPoint)? 0 : 1
+    for(; i<original.length; i++){
+        newValue = callBack(original[i], newValue)
+    }
+    return newValue;
 }
