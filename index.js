@@ -1,1 +1,3 @@
-// Add your functions here
+function map(numbers) {
+  return numbers.map(n => n)
+}
