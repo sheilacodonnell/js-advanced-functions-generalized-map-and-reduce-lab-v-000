@@ -7,10 +7,10 @@ function map(original, callBack){
  }
 
  function reduce(original, callBack, start){ 
-    let newValue = (!!start) ? start : original[0]
+    let val = (!!start) ? start : original[0]
     let i = (!!start)? 0 : 1
     for(; i < original.length; i++){
-        newValue = callBack(original[i], newValue)
+        val = callBack(original[i], val)
     }
-    return newValue;
+    return val;
 } 
